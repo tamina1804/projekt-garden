@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <title>Freude Schenken</title>
+</head>
+<body>
+<div class="background_pink"><!--Backround-->
+<header>
+    <div class="header-container">
+        <img src="img/Logo.png" alt="Logo" class="logo">
+        <h1 class="headline">Freude Schenken</h1>
+        <button class="home-button" onclick="location.href='index.html'">&#x21E6;</button>
+    </div>    
+</header>
+<main>
+    <div class="text">
+        <h2>Gutscheine für Paula’s Garden
+        </h2>
+        <h3>Verschenke pures Gartenglück!
+        </h3>
+        <p>Wähle eins der Motive sowie deinen Wunschbetrag aus. Schreibe den Namen des beschenkten Menschen in die Eingabemaske. Dein Gutschein wird durch deine Bestellung direkt hier in Paula’s Garden ausgedruckt. Du kannst ihn sofort bezahlen und mitnehmen!
+        </p>
+    </div>
+    <div class="container-gutschein"><!--Gutscheingenerator-->
+        <h1 class="pink">Dein individueller Gutschein</h1>
+        <h2 class="pink">Wähle dein Motiv</h2>
+        <div class="gallery">
+            <div class="image-display">
+                <img id="currentImage" src="img/Gutschein Rosen hell3.png" alt="Aktuelles Motiv" />
+                <div id="overlayText"><!--Daynamische Anzeige auf Gutschein-->
+                    <span id="overlayName">Name</span>
+                    <span id="overlayAmount">Euro</span>
+                </div>
+                <div class="image-navigation"><!--Galerie Buttons-->
+                    <button id="prevBtn">&#10094;</button>
+                    <button id="nextBtn">&#10095;</button>
+                </div>
+            <div class="motif-selection"><!--Gutschein Motive-->
+                <label>
+                    <input type="radio" name="motif" value="img/Gutschein Rosen hell3.png" checked />
+                    <span>Winterheide</span>
+                </label>
+                <label>
+                    <input type="radio" name="motif" value="img/Gutschein Flowerpower3.png" />
+                    <span>Flowerpower</span>
+                </label>
+                <label>
+                    <input type="radio" name="motif" value="img/Gutschein Halloween3.png" />
+                    <span>Happy Bees</span>
+                </label>
+                <label>
+                    <input type="radio" name="motif" value="img/Gutschein Halloween3.png" />
+                    <span>Spooky Halloween</span>
+                </label>
+            </div>
+        </div>
+        <br><br>
+        <h2 class="pink">Weitere Angaben für den Geschenkgutschein</h2>
+        <div class="input-group"> <!--Inputfelder Name und Betrag-->
+            <label for="recipient"><h3>Für wen ist der Geschenkgutschein?</h3></label>
+            <input type="text" id="recipient" maxlength="30" placeholder="Max. 30 Stellen" />
+        </div>
+        <br>
+        <h3>Wähle deinen Wunschbetrag</h3>
+        <div class="amount-selection">
+            <label><input type="radio" name="amount" value="10"/>10 Euro</label>
+            <label><input type="radio" name="amount" value="25"/>25 Euro</label>
+            <label><input type="radio" name="amount" value="50"/>50 Euro</label>
+            <label><input type="radio" name="amount" value="100"/>100 Euro</label>
+            <label><input type="radio" name="amount" value="custom"/>Wunschbetrag Euro <input type="number" min="1" style="width: 80px;" /></label>
+        </div>
+    
+        <br>
+        <h2 class="pink">Angaben zum Käufer</h2>
+        <div class="input-group"><!--Inputfelder Käufer-->
+            <label for="firstname">Vorname*</label>
+            <input type="text" id="firstname" required />
+        </div>
+        <div class="input-group">
+            <label for="lastname">Name*</label>
+            <input type="text" id="lastname" required />
+        </div>
+        <div class="input-group">
+            <label for="street">Straße*</label>
+            <input type="text" id="street" required />
+        </div>
+        <div class="input-group">
+            <label for="house-number">Hausnummer*</label>
+            <input type="text" id="house-number" required />
+        </div>
+        <div class="input-group">
+            <label for="postal-code">Postleitzahl*</label>
+            <input type="number" id="postal-code" required />
+        </div>
+        <div class="input-group">
+            <label for="city">Ort*</label>
+            <input type="text" id="city" required />
+        </div>
+        <br>
+        <label>
+            <input class="checkbox" type="checkbox" required />
+            Ich habe die Datenschutzerklärung zur Kenntnis genommen. Ich stimme zu, dass meine Angaben und Daten elektronisch erhoben und gespeichert werden.<br> Die Einwilligung kann ich jederzeit für die Zukunft widerrufen. *
+        </label>
+        <br>
+        <button id="generate">Jetzt verpflichtend kaufen</button><!-- Kaufen Button -->
+        <div id="popup" class="popup"> <!-- Popup -->
+            <div class="popup-content">
+                <span id="closePopup" class="close-btn">&times;</span>
+                <p class="white">Die Bestellung deines Gutscheins ist eingegangen und wird für dich gedruckt. Du kannst ihn in 10 Minuten an der Kasse 4 abholen und direkt mit deinen weiteren Einkäufen bezahlen. Wir wünschen dir und dem von dir beschenkten Menschen viel Freude damit.
+                <br>
+                <br>
+                Dein Paula’s Garden Team</p>
+            </div>
+        </div>    
+    </div>
+</main>
+</div><!--Backround-->
+<script src="script.js"></script>
+</body>
+</html>    
